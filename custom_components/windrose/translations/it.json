@@ -1,0 +1,130 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Collega WindRose",
+        "description": "Crea una chiave API in WindRose da Impostazioni → Accesso API e MCP (vale ogni piano, anche Free) e incolla qui le due parti. L'integrazione legge soltanto le tue stazioni.",
+        "data": {
+          "key_id": "ID chiave",
+          "key_secret": "Segreto della chiave"
+        },
+        "data_description": {
+          "key_id": "Inizia con wr_",
+          "key_secret": "Viene mostrato una sola volta, alla creazione della chiave"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Sostituisci la chiave WindRose",
+        "description": "La chiave API non funziona più: è stata revocata o è scaduta. Incollane una nuova.",
+        "data": {
+          "key_id": "ID chiave",
+          "key_secret": "Segreto della chiave"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "L'ID o il segreto della chiave sono sbagliati, oppure la chiave è stata revocata.",
+      "plan": "L'accesso API non è incluso nel piano di questo account.",
+      "rate_limited": "Troppe richieste per questa chiave. Riprova tra un minuto.",
+      "cannot_connect": "Impossibile raggiungere WindRose. Controlla la connessione e riprova.",
+      "no_stations": "Questa chiave non vede nessuna stazione. Aggiungine una in WindRose, oppure usa una chiave non limitata a una stazione eliminata.",
+      "unknown": "Errore imprevisto. Guarda il log di Home Assistant."
+    },
+    "abort": {
+      "already_configured": "Questa chiave è già configurata.",
+      "reauth_successful": "La chiave è stata sostituita."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "temperature": {
+        "name": "Temperatura"
+      },
+      "humidity": {
+        "name": "Umidità"
+      },
+      "dew_point": {
+        "name": "Punto di rugiada"
+      },
+      "wind_speed": {
+        "name": "Velocità del vento"
+      },
+      "wind_gust": {
+        "name": "Raffica (10 min)"
+      },
+      "wind_average": {
+        "name": "Vento medio (10 min)"
+      },
+      "wind_direction": {
+        "name": "Direzione del vento"
+      },
+      "wind_cardinal": {
+        "name": "Direzione del vento (bussola)"
+      },
+      "pressure": {
+        "name": "Pressione"
+      },
+      "rain_today": {
+        "name": "Pioggia oggi"
+      },
+      "rain_rate": {
+        "name": "Intensità della pioggia"
+      },
+      "rain_24h": {
+        "name": "Pioggia ultime 24 h"
+      },
+      "rain_month": {
+        "name": "Pioggia del mese"
+      },
+      "solar_radiation": {
+        "name": "Radiazione solare"
+      },
+      "uv_index": {
+        "name": "Indice UV"
+      },
+      "heat_index": {
+        "name": "Indice di calore"
+      },
+      "wind_chill": {
+        "name": "Temperatura percepita (vento)"
+      },
+      "wet_bulb": {
+        "name": "Bulbo umido"
+      },
+      "indoor_temperature": {
+        "name": "Temperatura interna"
+      },
+      "indoor_humidity": {
+        "name": "Umidità interna"
+      },
+      "pm25": {
+        "name": "PM2.5"
+      },
+      "pm10": {
+        "name": "PM10"
+      },
+      "aqi": {
+        "name": "Indice qualità dell'aria"
+      },
+      "lightning_strikes": {
+        "name": "Fulmini oggi"
+      },
+      "lightning_distance": {
+        "name": "Distanza ultimo fulmine"
+      },
+      "evapotranspiration": {
+        "name": "Evapotraspirazione oggi"
+      }
+    },
+    "binary_sensor": {
+      "raining": {
+        "name": "Pioggia in corso"
+      }
+    },
+    "weather": {
+      "station": {
+        "name": "Meteo"
+      }
+    }
+  }
+}

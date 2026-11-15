@@ -1,0 +1,130 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect WindRose",
+        "description": "Create an API key in WindRose under Settings → API & MCP access (any plan, Free included) and paste both parts here. The integration only reads your stations.",
+        "data": {
+          "key_id": "Key ID",
+          "key_secret": "Key secret"
+        },
+        "data_description": {
+          "key_id": "Starts with wr_",
+          "key_secret": "Shown only once, when the key is created"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Replace the WindRose key",
+        "description": "The API key stopped working: it was revoked or has expired. Paste a new one.",
+        "data": {
+          "key_id": "Key ID",
+          "key_secret": "Key secret"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "The key ID or the secret is wrong, or the key was revoked.",
+      "plan": "API access is not included in this account's plan.",
+      "rate_limited": "Too many requests for this key. Try again in a minute.",
+      "cannot_connect": "Cannot reach WindRose. Check the connection and try again.",
+      "no_stations": "This key sees no station. Add one in WindRose first, or use a key that is not limited to a deleted station.",
+      "unknown": "Unexpected error. See the Home Assistant log."
+    },
+    "abort": {
+      "already_configured": "This key is already set up.",
+      "reauth_successful": "The key was replaced."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "temperature": {
+        "name": "Temperature"
+      },
+      "humidity": {
+        "name": "Humidity"
+      },
+      "dew_point": {
+        "name": "Dew point"
+      },
+      "wind_speed": {
+        "name": "Wind speed"
+      },
+      "wind_gust": {
+        "name": "Wind gust (10 min)"
+      },
+      "wind_average": {
+        "name": "Wind average (10 min)"
+      },
+      "wind_direction": {
+        "name": "Wind direction"
+      },
+      "wind_cardinal": {
+        "name": "Wind direction (compass)"
+      },
+      "pressure": {
+        "name": "Pressure"
+      },
+      "rain_today": {
+        "name": "Rain today"
+      },
+      "rain_rate": {
+        "name": "Rain rate"
+      },
+      "rain_24h": {
+        "name": "Rain last 24 h"
+      },
+      "rain_month": {
+        "name": "Rain this month"
+      },
+      "solar_radiation": {
+        "name": "Solar radiation"
+      },
+      "uv_index": {
+        "name": "UV index"
+      },
+      "heat_index": {
+        "name": "Heat index"
+      },
+      "wind_chill": {
+        "name": "Wind chill"
+      },
+      "wet_bulb": {
+        "name": "Wet bulb"
+      },
+      "indoor_temperature": {
+        "name": "Indoor temperature"
+      },
+      "indoor_humidity": {
+        "name": "Indoor humidity"
+      },
+      "pm25": {
+        "name": "PM2.5"
+      },
+      "pm10": {
+        "name": "PM10"
+      },
+      "aqi": {
+        "name": "Air quality index"
+      },
+      "lightning_strikes": {
+        "name": "Lightning strikes today"
+      },
+      "lightning_distance": {
+        "name": "Last lightning distance"
+      },
+      "evapotranspiration": {
+        "name": "Evapotranspiration today"
+      }
+    },
+    "binary_sensor": {
+      "raining": {
+        "name": "Raining"
+      }
+    },
+    "weather": {
+      "station": {
+        "name": "Weather"
+      }
+    }
+  }
+}
